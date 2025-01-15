@@ -1,0 +1,20 @@
+BTCEndpoint: "https://api.blockchain.com/v3"
+ETHEndpoint: "https://api.etherscan.io/api"
+THORNodeURL: "https://thornode.thorchain.info"
+LogLevel: "info"
+# MonitorInterval: "1m"
+
+```yaml
+chains:
+  ethereum:
+    rpc: "https://eth-mainnet.alchemyapi.io/v2/UZN5XE7926FSWIBGSPT9BF6G6HYDJDHGBR"
+    explorer: "https://etherscan.io"
+  bsc:
+    rpc: "https://bsc-dataseed.binance.org"
+    explorer: "https://bscscan.com"
+
+monitor:
+  address: "0xC564EE9f21Ed8A2d8E7e76c085740d5e4c5FaFbE"
+  interval: 15
+  blocks_to_scan: 100
+```

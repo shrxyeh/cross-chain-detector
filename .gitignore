@@ -1,0 +1,23 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Environment files
+.env
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+.idea/
+
+# Build
+bin/
+tmp/
+
+# Go specific
+*.test
+*.out
+go.work.env

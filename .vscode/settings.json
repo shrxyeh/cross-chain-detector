@@ -1,0 +1,11 @@
+{
+    "go.inferGopath": false,
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "editor.formatOnSave": true,
+    "[go]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    }
+}
