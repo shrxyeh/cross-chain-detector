@@ -1,6 +1,8 @@
 package types
+
 import (
-    "context" 
+    "context"
+    "github.com/shrxyeh/cross-chain-detector/internal/bridges"
 )
 
 type TransactionChecker interface {
@@ -17,27 +19,32 @@ type Transaction struct {
     CrossChainInfo  *CrossChainInfo
 }
 
-type CrossChainSwap struct {
-    SourceChain     string
-    TargetChain     string
-    SourceAddress   string
-    TargetAddress   string
-    SwapID          string
-    Status          string
-}
-
 type CrossChainInfo struct {
     SourceChain   string
     TargetChain   string
     TargetAddress string
     SwapID        string
     Status        string
-    Protocol      string  
+    Protocol      string
+}
+
+type CrossChainPattern struct {
+    SourceChain      string
+    TargetChain      string
+    Protocol         string
+    DestinationCheck func(string) bool
 }
 
 type Config struct {
     BitcoinRPC     string
     EthereumRPC    string
-    ThorchainAPI   string
     MonitorAddress string
+}
+
+type BridgeConfig struct {
+    Name         string
+    SourceChain  string
+    TargetChain  string
+    BridgeType   bridges.BridgeProtocol
+    RequiresLogs bool
 }
